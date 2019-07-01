@@ -1,8 +1,6 @@
 package com.cc.creating_threads.java_native;
 
 public class SecondWayOfCreatingThread {
-
-
     public static void main(String[] args) {
         new Thread(new SecondTask()).start();
     }
@@ -20,9 +18,5 @@ class SecondTask implements Runnable {
                 e.printStackTrace();
             }
         }
-    }
-
-    public SecondTask() {
-
     }
 }
