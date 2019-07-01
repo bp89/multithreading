@@ -10,7 +10,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <java.main.class>com.cc.NamingExecutorServiceThreads</java.main.class>
+        <java.main.class>com.cc.naming_threads.NamingExecutorServiceThreads</java.main.class>
     </properties>
 
     <dependencies>
