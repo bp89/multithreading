@@ -1,29 +1,29 @@
-package com.cc.return_values;
+package com.cc.return_values.java_native;
 
 import lombok.Builder;
 import lombok.Data;
 
-public class ThreadsApproachTwo {
+public class ThreadsApproachOne {
 
     public static void main(String[] args) {
 
-        ValueReturnTask2 task1 = ValueReturnTask2.builder()
+        ValueReturnTask task1 = ValueReturnTask.builder()
                 .a(3)
                 .b(4)
                 .build();
-        Thread t1 = new Thread(task1, "ValueReturnTask2");
+        Thread t1 = new Thread(task1, "ValueReturnTask");
 
-        ValueReturnTask2 task2 = ValueReturnTask2.builder()
+        ValueReturnTask task2 = ValueReturnTask.builder()
                 .a(1)
                 .b(8)
                 .build();
-        Thread t2 = new Thread(task2, "ValueReturnTask2");
+        Thread t2 = new Thread(task2, "ValueReturnTask");
 
-        ValueReturnTask2 task3 = ValueReturnTask2.builder()
+        ValueReturnTask task3 = ValueReturnTask.builder()
                 .a(2)
                 .b(9)
                 .build();
-        Thread t3 = new Thread(task3, "ValueReturnTask2");
+        Thread t3 = new Thread(task3, "ValueReturnTask");
 
         t1.start();
         t2.start();
@@ -40,7 +40,7 @@ public class ThreadsApproachTwo {
 
 @Data
 @Builder
-class ValueReturnTask2 implements Runnable {
+class ValueReturnTask implements Runnable {
     private int a;
     private int b;
     private int sum;
