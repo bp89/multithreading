@@ -1,4 +1,4 @@
-package com.cc.creating_threads.executors;
+package com.cc.creating_threads.executors.util;
 
 public class Task implements Runnable {
     @Override
@@ -7,7 +7,7 @@ public class Task implements Runnable {
             System.out.println("[" + Thread.currentThread().getName() + "]ABRACADABARA : " + i);
 
             try {
-                Thread.sleep(1000);
+                Thread.sleep(500);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
